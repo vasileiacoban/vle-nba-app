@@ -1,0 +1,11 @@
+<mat-card>
+
+  <mat-form-field>
+    <mat-select placeholder="Select a NBA Team">
+      <mat-option *ngFor="let team of teams" (click)="onSelect(team)" value={{team.teamId}}>{{team.fullName}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</mat-card>
+
+<app-team-roster *ngIf="selectedTeam" [team]="selectedTeam"></app-team-roster>

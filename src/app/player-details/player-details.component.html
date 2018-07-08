@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title> <p class="mat-h1">{{playerDetails[1].rowSet[0][1]}}</p> </mat-card-title>
+      <mat-card-subtitle>Team: {{playerDetails[0].rowSet[0][20]}} {{playerDetails[0].rowSet[0][17]}}</mat-card-subtitle>
+      <mat-card-subtitle>Position: {{playerDetails[0].rowSet[0][14]}}</mat-card-subtitle>
+      
+    </mat-card-header>
+    <img mat-card-image src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{id}}.png" alt="{{playerDetails[1].rowSet[0][1]}}">
+    <mat-card-content >
+      <span class="caption">PTS: {{playerDetails[1].rowSet[0][3]}}</span>
+      <span class="caption">AST: {{playerDetails[1].rowSet[0][4]}}</span>
+      <span class="caption">REB: {{playerDetails[1].rowSet[0][5]}}</span>
+      <span class="caption">PIE: {{playerDetails[1].rowSet[0][6]}}</span>
+
+    </mat-card-content>
+  </mat-card>

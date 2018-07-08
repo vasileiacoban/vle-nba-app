@@ -1,0 +1,26 @@
+
+$light: #f1f1f1;
+$light-grey: #f6f6f6;
+$indigo: #3f51b5;
+
+table {
+    width: 100%;
+}
+
+.mat-row {
+    &:nth-child(2n+1){
+        background-color: $light;
+    }
+
+    &:hover {
+        background-color: $light-grey;
+    }
+
+    .mat-column-name {
+        cursor: pointer;
+        color: $indigo;
+        &:hover {
+            color: #000;
+        }
+    }
+}
