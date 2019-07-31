@@ -9,17 +9,21 @@ import { TeamRosterService } from './team-roster.service';
 })
 export class TeamRosterComponent implements OnInit {
   @Input() team: Team;
-  
+
   public players;
   displayedColumns: string[] = ['id', 'name', 'height', 'weight', 'birth_date'];
 
   constructor(private _teamRosterService: TeamRosterService) { }
 
   ngOnInit() {
+    this._teamRosterService.getPlayers(this.team.teamId)
+    .subscribe((data: any) => {
+      console.log(data)
+      this.players = data.resultSets[0].rowSet
+    });
   }
 
   ngOnChanges(){
-      this._teamRosterService.getPlayers(this.team.teamId)
-      .subscribe((data: any) => this.players = data.resultSets[0].rowSet);
+
   }
 }
