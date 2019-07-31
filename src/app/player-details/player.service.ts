@@ -13,6 +13,6 @@ export class PlayerService {
   getPlayerDetails(playerId) {
     let Params = new HttpParams();
     Params = Params.append('PlayerID', playerId);
-    return this._http.get(this._url,  { params: Params });
+    return this._http.get(`https://cors-anywhere.herokuapp.com/${this._url}`,  { params: Params });
   }
 }

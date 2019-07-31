@@ -17,9 +17,9 @@ export class TeamRosterService {
 
   getPlayers(teamId) {
     let Params = new HttpParams();
-    Params = Params.append('Season', '2017-18');
+    Params = Params.append('Season', '2018-19');
     Params = Params.append('TeamID', teamId);
-    return this._http.get(this._url,  { params: Params });
+    return this._http.get(`https://cors-anywhere.herokuapp.com/${this._url}`,  { params: Params });
   }
 
 }

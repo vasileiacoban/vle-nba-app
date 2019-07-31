@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class TeamsService {
@@ -10,7 +9,7 @@ export class TeamsService {
   constructor(private _http: HttpClient) { }
 
   getTeams() {
-    return this._http.get(this._url);
+    return this._http.get(`https://cors-anywhere.herokuapp.com/${this._url}`);
   }
   
 }
